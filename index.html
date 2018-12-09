@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>음모론</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.fullpage/2.9.4/jquery.fullpage.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.fullpage/2.9.4/jquery.fullpage.min.css">
+	<script>		
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['1Page', '2Page', '3Page'],
+				menu: '#menu',
+				//equivalent to jQuery `easeOutBack` extracted from http://matthewlein.com/ceaser/
+				easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)'
+			});
+			$("#menu>li").click(function(){
+				$(this).addClass("act").siblings().removeClass("act");
+			});
+		});	
+	</script>	
+
+
+
+</head>
+<style type="text/css">
+	@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP:200,300,400,500,600,700,900|Playfair+Display+SC:900i&subset=japanese');
+	@import url('https://fonts.googleapis.com/css?family=Song+Myung:200,300,400,500,600,700,900|Playfair+Display+SC:900i&subset');
+	body {position: relative; background-color:black; }
+	#section {width: 100vw; height: 100vh;}
+	#section1 {height: 100vh;}
+	/*#um{position: absolute; font-family: 'Noto Serif JP', sans-serif; font-weight:900; font-size:100pt; left: 10px; margin: 0;}*/
+	#gif{position: absolute; top: 200px; left: 160px; z-index: 0; opacity: 1;}
+	#gif1{position: absolute; top: 450px; left: 160px; z-index: 0; opacity: 1;}
+	#gif2{position: absolute; top: 480px; left: 560px; z-index: 0; opacity: 1;}
+	#gif3{position: absolute; top: 200px; left: 910px; z-index: 0; opacity: 1;}
+	#gif4{position: absolute; top: 200px; left: 1210px; z-index: 0; opacity: 1;}
+	#gif5{position: absolute; top: 200px; left: 560px; z-index: 0; opacity: 1;}
+	.title{position: absolute; margin: 0; width: 300px; height: 100px; width: 300px; height: auto; top: 30px; left: 20px;}
+	.line{position: absolute; top: 40px; left: 25px; margin: 0;width: 300px; height: 100px; visibility: hidden; z-index: 9999;}
+	.line1{position: absolute; top: 140px; margin: 0;width: 300px; height: 100px; opacity: 0.7; display: none; /*animation: drop 1s infinite;*/}
+
+	.jesus {position: absolute; top: 10px; left: -80px; margin: 0; width: 400px; opacity: 0.5;}
+	.scrat {position: absolute; margin: 0;  width: 500px;}
+	.moon {position: absolute; top: 0px; left: 700px; margin: 0; width: 400px; opacity: 0.5;}
+	.imgbox img:last-child{display: none;}
+	.imgbox:hover img:last-child{display: inline-block;} 
+
+	.textbox {position: absolute; font-family: 'Song Myung', serif;  font-size: 1.3em; font-weight: 500; color: white; width: 600px; top: 60px; left: 480px; text-align: left; line-height: 30px;}
+
+/*다빈치코드*/
+	.explain {position: absolute; background-color: red; width: 250px; height: 100px; padding: 10px; top: 100px; left: 50px; border-radius: 5px; font-family: 'Song Myung', serif;  font-size: 1.1em; font-weight: 500; color: white;}
+
+	.minibox {position: absolute; background-color: red; width: 91px; height: 20px; left: 835px; top: 124px; visibility: visible;}
+	.img {position: absolute; width: 250px; top: 80px; left: 300px; visibility: hidden;}
+	.minibox:hover {visibility: hidden;}
+	.minibox:hover .img {visibility: visible;}
+
+	.minibox1 {position: absolute; background-color: red; width: 91px; height: 20px; left: 481px; top: 183px; visibility: visible;}
+	.img1 {position: absolute; width: 250px; height: 250px; top: 80px; left: -310px; visibility: hidden; font-family: 'Song Myung', serif;  font-size: 1em; font-weight: 500; color: black; background-color: white; padding: 10px;}
+	.minibox1:hover {visibility: hidden;}
+	.minibox1:hover .img1 {visibility: visible;}
+
+	.minibox2 {position: absolute; background-color: red; width: 95px; height: 20px; left: 723px; top: 213px; visibility: visible;}
+	.img2 {position: absolute; width: 300px; top: 80px; left: 400px; visibility: hidden;}
+	.minibox2:hover {visibility: hidden;}
+	.minibox2:hover .img2 {visibility: visible;}
+
+	.minibox3 {position: absolute; background-color: red; width: 196px; height: 20px; left: 760px; top: 272px; visibility: visible;}
+	.img3 {position: absolute; width: 400px; top: -30px; left: 350px; visibility: hidden;}
+	.minibox3:hover {visibility: hidden;}
+	.minibox3:hover .img3 {visibility: visible;}
+
+	.minibox4 {position: absolute; background-color: red; width: 92px; height: 20px; left: 860px; top: 360px; visibility: visible;}
+	.img4 {position: absolute; width: 250px; height: 250px; top: 80px; left: -700px; visibility: hidden; font-family: 'Song Myung', serif;  font-size: 1em; font-weight: 500; color: black; background-color: white; padding: 10px;}
+	.minibox4:hover {visibility: hidden;}
+	.minibox4:hover .img4 {visibility: visible;}
+
+	.minibox5 {position: absolute; background-color: red; width: 72px; height: 20px; left: 719px; top: 508px; visibility: visible;}
+	.img5 {position: absolute; width: 300px; top: -130px; left: 400px; visibility: hidden;}
+	.minibox5:hover {visibility: hidden;}
+	.minibox5:hover .img5 {visibility: visible;}
+
+	.minibox6 {position: absolute; background-color: red; width: 77px; height: 20px; left: 975px; top: 508px; visibility: visible;}
+	.img6 {position: absolute; width: 300px; top: -130px; left: 150px; visibility: hidden;}
+	.minibox6:hover {visibility: hidden;}
+	.minibox6:hover .img6 {visibility: visible;}
+	#top1 {position: absolute; background-color: red; width: 100px; height: 100px; top: 650px; left: 1350px; border-radius: 50px;}
+
+
+	#box{position: absolute; /*background-color: red;*/ width: 300px; height: auto; top: 130px; left: 18px;}
+	#text{position: absolute; /*background-color: rgba(255,0,0,0.5)*/; width: 1100px; height: 600px; top: 150px; left: 200px; font-family: 'Song Myung', serif;  font-size: 2.5em; font-weight: 900; color: red; /*overflow: scroll;*/ display: none;}
+	#input{ position: absolute; /*background-color: red;*/ width: 150px; height: 150px; float: left;}
+
+	.form { width: 200px; height: 150px;background-color: rgda(0,0,0,0); padding: 30px, 30px, 15px, 30px;  position: absolute; margin: 0;}
+	.form input[type=submit],
+	.form input[type=text],
+	.form label{color: #fff; width: 150px; height: 150px; margin: 0; text-align: center;}
+
+	.form input[type=text]
+	{
+		font-family: 'Song Myung', serif; 
+		background: transparent;
+		border: none;
+		border-bottom: 8px dashed #644498;
+		width: 150px;
+		outline: none;
+		padding: 0px 0px 0px 0px;
+		font-size: 12em;
+	}
+
+	.form input[type=text]:focus
+	{
+		border-bottom: 8px dashed #D9FFA9;
+	}
+
+	.form input[type=submit],
+	.form input[type=submit]:hover
+	
+</style>
+	
+<body>
+
+<div id="fullpage">
+<div class="section">
+	<div id="gif">
+		<img src="moon.gif" style="width: 350px; height: auto;">
+	</div>
+	<div id="gif1">
+		<img src="hmm.gif" style="width: 300px; height: auto;">
+	</div>
+	<div id="gif2">
+		<img src="a.gif" style="width: 300px; height: auto;">
+	</div>
+	<div id="gif4">
+		<img src="giphy.gif" style="width: 225px; height: auto;">
+	</div>
+	<div id="gif3">
+		<img src="ufo.gif" style="width: 300px; height: auto;">
+	</div>
+	<div id="gif5">
+		<img src="ww.gif" style="width: 300px; height: auto;">
+	</div>
+	
+	<div id="dd" style="z-index: 0;">	
+		<img src="dd.png" class="title"  style=" width: 300px; height: auto;">
+		<!-- <img src="d.png" class="line" style=" width: 300px; height: auto;"> -->
+	</div>
+	<div id="line1" class="line1" >
+		<img src="d.png" style="width: 300px; height: auto;">
+	</div>
+	
+	<div id="box"></div>
+	<div id="f"></div>
+	<div id="text"></div>
+
+	<script type="text/javascript">
+		var b = document.getElementById('dd');
+		var g = document.getElementById("line1");
+		var d = document.getElementById("text");
+
+
+			b.onclick = function() {
+					d.style.display = "block";
+					document.getElementById("gif").style.opacity = 0.5;
+					document.getElementById("gif1").style.opacity = 0.5;
+					document.getElementById("gif2").style.opacity = 0.5;
+					document.getElementById("gif3").style.opacity = 0.5;
+					document.getElementById("gif4").style.opacity = 0.5;
+					document.getElementById("gif5").style.opacity = 0.5;
+					
+					var total = 0;
+
+					for (var i = 0; i < 10; i++){
+						var newg = g.cloneNode(true);
+						newg.style.display = "block";
+						newg.style.top = 63 * i + "px";
+
+						box.appendChild(newg);
+
+					}
+				var o =0,text;
+				text = "사회에서 원인을 알 수 없는 사건이나 현상이 발생했을 때, 그 원인에 대해서 어떤 개인이나 집단이 의도적으로 확신을 가지고 펼치는 설명이다. 대개 그 발단이 되는 사건은 사회 전체에 강력한 파급력을 끼치며, 사람들에게 그 사회를 뒤흔드는 듯한 불안감을 주는 경우가 많다. 음모론적인 설명에는 핵심적으로 권력자, 지도자, 의사결정자들에 대한 불신이 포함되어 있다. 최신의 한 연구에 따르면, 음모론을 통하여 사람들이 자신들이 살아가는 사회체제와 구조에 만족하고 정당화하게 되는 것이 가능하다고 한다. 만악의 근원을 일부 악한 사람들의 문제로 몰아가면 어쨌건 그 사회 자체는 좋은 것이라고 느끼게 되기 때문이라고."
+				function typing() {
+					if(o<text.length){
+				d.innerHTML += text.charAt(o);
+				o++;
+				repeater = setTimeout(typing,50);
+					}
+				}
+				typing();
+
+				// document.body.style.height = 8000 + "px";
+
+			}
+	</script>
+</div>
+
+<div class="section">	
+		
+		<div class="imgbox">
+			<img class="jesus" src="jesus.png" style="width: 450px; height: 800px;">
+			<img class="scrat" src="scratch.png" style="width: 600px; height: auto; top: 30px; left: -150px; ">
+		</div>
+
+		<div class="imgbox">
+			<img class="moon" src="moon2.png" style="width:430px; height: auto;">
+			<img class="scrat" src="scratch.png" style="width: 600px; height: auto; top: 30px; left: 610px; ">
+		</div>
+
+		<script type="text/javascript">
+			function a(gb){
+				var data = document.getElementById('g01').value;
+
+					if (data.length == '1'){
+						document.getElementById('g02').focus();
+					}
+			}
+			function b(gb){
+				var data = document.getElementById('g02').value
+
+					if (data.length == '1'){
+						document.getElementById('g03').focus();
+					}
+			}
+			function c(gb){
+				var data = document.getElementById('g03').value
+
+					if (data.length == '1'){
+						document.getElementById('g01').focus();
+					}
+			}
+
+			var keys = {
+		      d: { code: 100, pressed: false, next: 'e' },
+		      e: { code: 101, pressed: false, next: 'v' },
+		      v: { code: 118, pressed: false, next: 'd' }
+		   },
+   		nextKey = 'd';
+
+			$(document).keypress(function(e) {
+    		 if (e.keyCode === keys[nextKey].code) {
+        		keys[nextKey].pressed = true;
+        		nextKey = keys[nextKey].next;
+    		}else {
+        		keys.d.pressed = false;
+        		keys.e.pressed = false;
+        		keys.v.pressed = false;
+        		nextKey = 'd';
+    		}
+
+    		 if (keys.d.pressed && keys.e.pressed && keys.v.pressed) {
+        				window.location.href='#3Page';
+    			}
+			})
+
+		</script>
+
+		<form class="form" action="" method="post">
+		<label>
+		
+			<div id="input" style="top: -70px; left: 400px;"><input type="text" name="field1" required="true"  id="g01" value="" onkeyup="a(1);" style="text-transform: uppercase;" /></div>
+			<div id="input" style="top: -70px; left: 640px;"><input type="text" name="field1" required="true"  id="g02" value=""  onkeyup="b(1);" style="text-transform: uppercase; float: left;" /></div>
+			<div id="input" style="top: -70px; left: 880px;"><input type="text" name="field1" required="true"  id="g03" value="" onkeyup="c(1);" style="text-transform: uppercase; float: left;" /></div>
+		</label>
+		</form>
+
+		<script type="text/javascript">
+			var top1 = document.getElementById('#top1')
+
+			top1.onclick = function () {
+				window.location.href='#2Page';
+			}
+</script>
+</div>
+
+<div class="section">
+	<div class="explain">
+		*빨간 박스 정중앙에 커서를 올려보세요<br>
+		*전 페이지로 돌아가고 싶다면 동그라미를 눌러주세요
+	</div>
+
+	<span class="textbox">
+		다빈치 코드(The Davinci code)<br><br>전 세계를 예수 신성 논란으로 몰아넣은 책, '다빈치코드'는 예수 음모론중 가장 유명한 버전이며, 보는 이로 하여금 마치 1700여년전 사라진 <br>아리우스파의 후예들이 아직도 건재한 듯한 착각을 불러 일으킨다. <br>이 책은 레오나르도 다빈치의 '최후의 만찬' 그림속에 아주 중요한 비밀코드가 숨어있다고 주장한다.<br>
+		댄 브라운은 그림속 예수 그리스도 오른편에 앉아 있는 사람이 바로 <br>그 비밀코드라고 말한다. 여성스럽게 그려진 그림속 주인공은 성격속 제자 요한이 아닌 예수의 여인 '막달란 마리아'를 그린 것이라는 주장이다. <br>이 그림을 그린 레오나르도 다빈치는 비밀조직 '시온수도회'의 수장이며 <br>그 조직이 전력을 다해 지켜온 것은 예수와 막달란 마리아사이의 후손, <br>즉 예수의 핏줄이라는 그의 주장도 이 책의 줄거리중 하나다. 레오나르도 다빈치가 밀라노의 산타 마리아 텔레 그라치에 교회에 벽화를 의뢰 받았을 때, 그 상징을 그림속에 포함시켰다고 한다.<br>
+		예수와 막달란 마리아 사이의 V자 구조나 두 사람의 전체적인 구도 M자등은 그 두사람의 관계를 암시하고 있고, 결국 성배를 뜻하는 말 Holy Grail (San Greal)은 Holy Blood (Sang Real) 즉 신성한 핏줄 - 예수의 후손을 의미한다고 이 책은 결말짓고 있다.<br>
+		다분히 니케아 공의회 당시 이단으로 쫒겨난 아리우스파의 교리를 염두에 두고 집필한 듯한 이 책은 충격적인 내용임에도 많은 증거 자료와 논리적인 개연성을 토대로 단순한 음모론으로 치부해버릴수 없을 만큼의 <br>진지한 토론들을 전 세계에 가져다 주었다. 로마 교황청이 이 책 내용에 <br>대해 공개적인 토론회를 진행한 일은 유명한 일화이다. 
+
+	</span>
+
+	<div class="minibox"> &ensp;1)
+		<img src="davinci.png" class="img">
+	</div>
+		
+	<div class="minibox1"> &ensp;2)
+		<span class="img1">아리우스파는 이집트 알렉산드리아 출신의 아리우스가 주장한 기독교 신학이다. 아리우스는 ‘성자’ 예수는 창조된 존재(피조물)이며, ‘성부’에게 종속적인 개념이라는 성격의 주장을 했는데, 삼위일체에 반대하는 그의 주장은 아리우스주의라는 신학적 흐름으로 발전하였다. 이에 대해 로마 가톨릭교회에서는 제1차 니케아 공의회(325년)에서 아리우스는 이단으로 배격되었으며, 아리우스 일파에 대한 공식적인 파문선언이 삽입된 니케아 신경을 채택하였다.
+		</span>
+	</div>
+	
+	<div class="minibox2"> 
+		&ensp;3)
+		<img src="final.png" class="img2">
+	</div>
+
+	<div class="minibox3">
+		&ensp;4)
+		<img src="you.png" class="img3">
+	</div>
+	<div class="minibox4"> 
+		&ensp;5)
+		<span class="img4">중세부터 현재까지 프랑스의 막후에서 정치를 휘두른 비밀조직. 몇 번이나 <br>왕위를 찬탈하려고 했었고, 프랑스 정부를 위기로 몰았던 비밀조직 '성체회'는 <br>조직체계가 '시온수도회'와 일치했는데, '시온수도회'의 분체이거나, 지도부는 <br>시온수도회일 것이 분명하다. <br>장미십자단 등으로 이름을 바꾸면서 실체가 알려지지 않는 막후의 비밀세력이다. 또한 프리메이슨단 역시 시온교단과 관련이 있다. 	
+		</span>
+	</div>
+	<div class="minibox5"> 
+		&ensp;6)
+		<img src="v.png" class="img5">
+	</div>
+	<div class="minibox6"> 
+		&ensp;7)
+		<img src="m.png" class="img6">
+	</div>
+	<div id="top1"></div>
+
+</div>
+
+
+</div>
+
+
+		
+
+</body>
+</html>
